@@ -20,17 +20,26 @@ class SearchBloc extends Bloc<SearchEvent, SearchState> {
 
       final Either<DownloadsFail, SearchResult?> result =
           await _searchRepo.getSeaerchList();
-print('=====================$result');
+      print('=====================$result');
       emit(result.fold(
-          (l) => state.copyWith(isLoading: true, searchResult: null),
-          (r) => state.copyWith(isLoading: false, searchResult: r)));
+          (l) => state.copyWith(isLoading: true, searchResult: null), (r) {
+        print("object====${r?.toJson()}");
+        return state.copyWith(
+            isLoading: false, searchResult: r, isSearch: false);
+      }));
     });
 
-    on<_Search>((event, emit) {
-      emit(state.copyWith(search: event.value));
+    on<_Search>((event, emit) async {
+      emit(state.copyWith(isLoading: true));
+      final Either<DownloadsFail, SearchResult?> result =
+          await _searchRepo.getSeaerchList(key: event.query);
+      print('=====================$result');
+      emit(result.fold(
+          (l) => state.copyWith(isLoading: true, searchResult: null), (r) {
+        print("object====${r?.toJson()}");
+        return state.copyWith(
+            isLoading: false, searchResult: r, isSearch: true);
+      }));
     });
-
   }
-
-
 }

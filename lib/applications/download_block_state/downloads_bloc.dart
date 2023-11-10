@@ -25,10 +25,7 @@ class DownloadsBloc extends Bloc<DownloadsEvent, Downloadstate> {
       final Either<DownloadsFail, List<Downloads>> downloadsOption =
           await _idownloadRepo.getDownloadImages();
 
-
-
       // print(object)
-
 
       emit(downloadsOption.fold(
           (fail) => state.copyWith(
@@ -42,5 +39,3 @@ class DownloadsBloc extends Bloc<DownloadsEvent, Downloadstate> {
     });
   }
 }
-
-

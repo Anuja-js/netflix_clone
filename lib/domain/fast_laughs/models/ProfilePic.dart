@@ -1,27 +1,30 @@
 // To parse this JSON data, do
 //
-//     final searchResult = searchResultFromJson(jsonString);
+//     final profilePic = profilePicFromJson(jsonString);
 
 import 'dart:convert';
 
-SearchResult searchResultFromJson(String str) => SearchResult.fromJson(json.decode(str));
+ProfilePic profilePicFromJson(String str) => ProfilePic.fromJson(json.decode(str));
 
-String searchResultToJson(SearchResult data) => json.encode(data.toJson());
+String profilePicToJson(ProfilePic data) => json.encode(data.toJson());
 
-class SearchResult {
+class ProfilePic {
+  Dates? dates;
   int? page;
   List<Result>? results;
   int? totalPages;
   int? totalResults;
 
-  SearchResult({
+  ProfilePic({
+    this.dates,
     this.page,
     this.results,
     this.totalPages,
     this.totalResults,
   });
 
-  factory SearchResult.fromJson(Map<String, dynamic> json) => SearchResult(
+  factory ProfilePic.fromJson(Map<String, dynamic> json) => ProfilePic(
+    dates: json["dates"] == null ? null : Dates.fromJson(json["dates"]),
     page: json["page"],
     results: json["results"] == null ? [] : List<Result>.from(json["results"]!.map((x) => Result.fromJson(x))),
     totalPages: json["total_pages"],
@@ -29,10 +32,31 @@ class SearchResult {
   );
 
   Map<String, dynamic> toJson() => {
+    "dates": dates?.toJson(),
     "page": page,
     "results": results == null ? [] : List<dynamic>.from(results!.map((x) => x.toJson())),
     "total_pages": totalPages,
     "total_results": totalResults,
+  };
+}
+
+class Dates {
+  DateTime? maximum;
+  DateTime? minimum;
+
+  Dates({
+    this.maximum,
+    this.minimum,
+  });
+
+  factory Dates.fromJson(Map<String, dynamic> json) => Dates(
+    maximum: json["maximum"] == null ? null : DateTime.parse(json["maximum"]),
+    minimum: json["minimum"] == null ? null : DateTime.parse(json["minimum"]),
+  );
+
+  Map<String, dynamic> toJson() => {
+    "maximum": "${maximum!.year.toString().padLeft(4, '0')}-${maximum!.month.toString().padLeft(2, '0')}-${maximum!.day.toString().padLeft(2, '0')}",
+    "minimum": "${minimum!.year.toString().padLeft(4, '0')}-${minimum!.month.toString().padLeft(2, '0')}-${minimum!.day.toString().padLeft(2, '0')}",
   };
 }
 
@@ -41,12 +65,12 @@ class Result {
   String? backdropPath;
   List<int>? genreIds;
   int? id;
-  String? originalLanguage;
+  OriginalLanguage? originalLanguage;
   String? originalTitle;
   String? overview;
   double? popularity;
   String? posterPath;
-  String? releaseDate;
+  DateTime? releaseDate;
   String? title;
   bool? video;
   double? voteAverage;
@@ -74,12 +98,12 @@ class Result {
     backdropPath: json["backdrop_path"],
     genreIds: json["genre_ids"] == null ? [] : List<int>.from(json["genre_ids"]!.map((x) => x)),
     id: json["id"],
-    originalLanguage: json["original_language"],
+    originalLanguage: originalLanguageValues.map[json["original_language"]]!,
     originalTitle: json["original_title"],
     overview: json["overview"],
     popularity: json["popularity"]?.toDouble(),
     posterPath: json["poster_path"],
-    releaseDate: json["release_date"],
+    releaseDate: json["release_date"] == null ? null : DateTime.parse(json["release_date"]),
     title: json["title"],
     video: json["video"],
     voteAverage: json["vote_average"]?.toDouble(),
@@ -91,15 +115,39 @@ class Result {
     "backdrop_path": backdropPath,
     "genre_ids": genreIds == null ? [] : List<dynamic>.from(genreIds!.map((x) => x)),
     "id": id,
-    "original_language": originalLanguage,
+    "original_language": originalLanguageValues.reverse[originalLanguage],
     "original_title": originalTitle,
     "overview": overview,
     "popularity": popularity,
     "poster_path": posterPath,
-    "release_date": releaseDate,
+    "release_date": "${releaseDate!.year.toString().padLeft(4, '0')}-${releaseDate!.month.toString().padLeft(2, '0')}-${releaseDate!.day.toString().padLeft(2, '0')}",
     "title": title,
     "video": video,
     "vote_average": voteAverage,
     "vote_count": voteCount,
   };
+}
+
+enum OriginalLanguage {
+  EN,
+  ES,
+  UK
+}
+
+final originalLanguageValues = EnumValues({
+  "en": OriginalLanguage.EN,
+  "es": OriginalLanguage.ES,
+  "uk": OriginalLanguage.UK
+});
+
+class EnumValues<T> {
+  Map<String, T> map;
+  late Map<T, String> reverseMap;
+
+  EnumValues(this.map);
+
+  Map<T, String> get reverse {
+    reverseMap = map.map((k, v) => MapEntry(v, k));
+    return reverseMap;
+  }
 }
