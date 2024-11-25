@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:netflix/applications/download_block_state/downloads_bloc.dart';
 import 'package:netflix/applications/newAndHot/new_and_hot_bloc.dart';
 import 'package:netflix/core/colors/colors.dart';
 import 'package:netflix/core/constants.dart';
@@ -13,7 +12,7 @@ class NewAndHot extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     WidgetsBinding.instance.addPostFrameCallback((_) {
-      context.read<NewAndHotBloc>().add(NewAndHotEvent.getCommingsoonList());
+      context.read<NewAndHotBloc>().add(const NewAndHotEvent.getCommingsoonList());
       // context.read<NewAndHotBloc>().add(NewAndHotEvent.getEveryoneList());
     });
     return DefaultTabController(
@@ -76,7 +75,7 @@ class NewAndHot extends StatelessWidget {
 Widget _buildCommingSoon() {
   return BlocBuilder<NewAndHotBloc, NewAndHotState>(
     builder: (context, state) {
-      return state.isLoading==true?Center(child: CircularProgressIndicator()):  ListView.builder(
+      return state.isLoading==true?const Center(child: CircularProgressIndicator()):  ListView.builder(
         itemCount: state.neewAndHotData?.results?.length,
         shrinkWrap: true,
         itemBuilder: (BuildContext context, int index) {
@@ -92,7 +91,7 @@ Widget _buildCommingSoon() {
 Widget _buildWatcheveryone() {
   return BlocBuilder<NewAndHotBloc, NewAndHotState>(
     builder: (context, state) {
-      return state.isLoading==true?Center(child: CircularProgressIndicator()):  ListView.builder(
+      return state.isLoading==true?const Center(child: CircularProgressIndicator()):  ListView.builder(
         shrinkWrap: true,
         itemCount:state.neewAndHotData?.results?.length,
         itemBuilder: (BuildContext context, int index) {

@@ -6,7 +6,7 @@ abstract class DownloadsEvent with _$DownloadsEvent{
   // @JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
   const factory DownloadsEvent.getDownloadImages() = _GetDownloadImages;
 
-
+  const factory DownloadsEvent.getscreenImages() = _GetscreenImages;
 
 
 }

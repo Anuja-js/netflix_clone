@@ -5,6 +5,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:netflix/applications/download_block_state/downloads_bloc.dart';
 import 'package:netflix/core/colors/colors.dart';
 import 'package:netflix/core/constants.dart';
+import 'package:netflix/presentation/downloads/see_downloads.dart';
 
 import '../../widgets/app_bar_widget.dart';
 
@@ -20,7 +21,7 @@ class _DownloadsState extends State<Downloads> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    WidgetsBinding.instance!.addPostFrameCallback((_) {
+    WidgetsBinding.instance.addPostFrameCallback((_) {
       BlocProvider.of<DownloadsBloc>(context).add(const DownloadsEvent.getDownloadImages());
     });
     // BlocProvider.of<DownloadsBloc>(context)
@@ -183,7 +184,13 @@ class Section3 extends StatelessWidget {
         kh10,
         MaterialButton(
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
-          onPressed: () {},
+          onPressed: () {
+            Navigator.push(context, MaterialPageRoute(builder: (context){
+              return SeeDownloadScreen();
+
+            }));
+            
+          },
           color: buttonColorwhite,
           child: const Padding(
             padding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),

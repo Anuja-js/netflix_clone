@@ -20,21 +20,18 @@ mixin _$NewAndHotEvent {
   TResult when<TResult extends Object?>({
     required TResult Function() getCommingsoonList,
     required TResult Function() getEveryoneList,
-    required TResult Function() loadMore,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? getCommingsoonList,
     TResult? Function()? getEveryoneList,
-    TResult? Function()? loadMore,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? getCommingsoonList,
     TResult Function()? getEveryoneList,
-    TResult Function()? loadMore,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -42,21 +39,18 @@ mixin _$NewAndHotEvent {
   TResult map<TResult extends Object?>({
     required TResult Function(_GetCommingsoonList value) getCommingsoonList,
     required TResult Function(_GetEveryoneList value) getEveryoneList,
-    required TResult Function(_LoadMore value) loadMore,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_GetCommingsoonList value)? getCommingsoonList,
     TResult? Function(_GetEveryoneList value)? getEveryoneList,
-    TResult? Function(_LoadMore value)? loadMore,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_GetCommingsoonList value)? getCommingsoonList,
     TResult Function(_GetEveryoneList value)? getEveryoneList,
-    TResult Function(_LoadMore value)? loadMore,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -120,7 +114,6 @@ class _$GetCommingsoonListImpl implements _GetCommingsoonList {
   TResult when<TResult extends Object?>({
     required TResult Function() getCommingsoonList,
     required TResult Function() getEveryoneList,
-    required TResult Function() loadMore,
   }) {
     return getCommingsoonList();
   }
@@ -130,7 +123,6 @@ class _$GetCommingsoonListImpl implements _GetCommingsoonList {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? getCommingsoonList,
     TResult? Function()? getEveryoneList,
-    TResult? Function()? loadMore,
   }) {
     return getCommingsoonList?.call();
   }
@@ -140,7 +132,6 @@ class _$GetCommingsoonListImpl implements _GetCommingsoonList {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? getCommingsoonList,
     TResult Function()? getEveryoneList,
-    TResult Function()? loadMore,
     required TResult orElse(),
   }) {
     if (getCommingsoonList != null) {
@@ -154,7 +145,6 @@ class _$GetCommingsoonListImpl implements _GetCommingsoonList {
   TResult map<TResult extends Object?>({
     required TResult Function(_GetCommingsoonList value) getCommingsoonList,
     required TResult Function(_GetEveryoneList value) getEveryoneList,
-    required TResult Function(_LoadMore value) loadMore,
   }) {
     return getCommingsoonList(this);
   }
@@ -164,7 +154,6 @@ class _$GetCommingsoonListImpl implements _GetCommingsoonList {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_GetCommingsoonList value)? getCommingsoonList,
     TResult? Function(_GetEveryoneList value)? getEveryoneList,
-    TResult? Function(_LoadMore value)? loadMore,
   }) {
     return getCommingsoonList?.call(this);
   }
@@ -174,7 +163,6 @@ class _$GetCommingsoonListImpl implements _GetCommingsoonList {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_GetCommingsoonList value)? getCommingsoonList,
     TResult Function(_GetEveryoneList value)? getEveryoneList,
-    TResult Function(_LoadMore value)? loadMore,
     required TResult orElse(),
   }) {
     if (getCommingsoonList != null) {
@@ -228,7 +216,6 @@ class _$GetEveryoneListImpl implements _GetEveryoneList {
   TResult when<TResult extends Object?>({
     required TResult Function() getCommingsoonList,
     required TResult Function() getEveryoneList,
-    required TResult Function() loadMore,
   }) {
     return getEveryoneList();
   }
@@ -238,7 +225,6 @@ class _$GetEveryoneListImpl implements _GetEveryoneList {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? getCommingsoonList,
     TResult? Function()? getEveryoneList,
-    TResult? Function()? loadMore,
   }) {
     return getEveryoneList?.call();
   }
@@ -248,7 +234,6 @@ class _$GetEveryoneListImpl implements _GetEveryoneList {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? getCommingsoonList,
     TResult Function()? getEveryoneList,
-    TResult Function()? loadMore,
     required TResult orElse(),
   }) {
     if (getEveryoneList != null) {
@@ -262,7 +247,6 @@ class _$GetEveryoneListImpl implements _GetEveryoneList {
   TResult map<TResult extends Object?>({
     required TResult Function(_GetCommingsoonList value) getCommingsoonList,
     required TResult Function(_GetEveryoneList value) getEveryoneList,
-    required TResult Function(_LoadMore value) loadMore,
   }) {
     return getEveryoneList(this);
   }
@@ -272,7 +256,6 @@ class _$GetEveryoneListImpl implements _GetEveryoneList {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_GetCommingsoonList value)? getCommingsoonList,
     TResult? Function(_GetEveryoneList value)? getEveryoneList,
-    TResult? Function(_LoadMore value)? loadMore,
   }) {
     return getEveryoneList?.call(this);
   }
@@ -282,7 +265,6 @@ class _$GetEveryoneListImpl implements _GetEveryoneList {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_GetCommingsoonList value)? getCommingsoonList,
     TResult Function(_GetEveryoneList value)? getEveryoneList,
-    TResult Function(_LoadMore value)? loadMore,
     required TResult orElse(),
   }) {
     if (getEveryoneList != null) {
@@ -297,119 +279,9 @@ abstract class _GetEveryoneList implements NewAndHotEvent {
 }
 
 /// @nodoc
-abstract class _$$LoadMoreImplCopyWith<$Res> {
-  factory _$$LoadMoreImplCopyWith(
-          _$LoadMoreImpl value, $Res Function(_$LoadMoreImpl) then) =
-      __$$LoadMoreImplCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$LoadMoreImplCopyWithImpl<$Res>
-    extends _$NewAndHotEventCopyWithImpl<$Res, _$LoadMoreImpl>
-    implements _$$LoadMoreImplCopyWith<$Res> {
-  __$$LoadMoreImplCopyWithImpl(
-      _$LoadMoreImpl _value, $Res Function(_$LoadMoreImpl) _then)
-      : super(_value, _then);
-}
-
-/// @nodoc
-
-class _$LoadMoreImpl implements _LoadMore {
-  const _$LoadMoreImpl();
-
-  @override
-  String toString() {
-    return 'NewAndHotEvent.loadMore()';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$LoadMoreImpl);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() getCommingsoonList,
-    required TResult Function() getEveryoneList,
-    required TResult Function() loadMore,
-  }) {
-    return loadMore();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? getCommingsoonList,
-    TResult? Function()? getEveryoneList,
-    TResult? Function()? loadMore,
-  }) {
-    return loadMore?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? getCommingsoonList,
-    TResult Function()? getEveryoneList,
-    TResult Function()? loadMore,
-    required TResult orElse(),
-  }) {
-    if (loadMore != null) {
-      return loadMore();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_GetCommingsoonList value) getCommingsoonList,
-    required TResult Function(_GetEveryoneList value) getEveryoneList,
-    required TResult Function(_LoadMore value) loadMore,
-  }) {
-    return loadMore(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_GetCommingsoonList value)? getCommingsoonList,
-    TResult? Function(_GetEveryoneList value)? getEveryoneList,
-    TResult? Function(_LoadMore value)? loadMore,
-  }) {
-    return loadMore?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_GetCommingsoonList value)? getCommingsoonList,
-    TResult Function(_GetEveryoneList value)? getEveryoneList,
-    TResult Function(_LoadMore value)? loadMore,
-    required TResult orElse(),
-  }) {
-    if (loadMore != null) {
-      return loadMore(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _LoadMore implements NewAndHotEvent {
-  const factory _LoadMore() = _$LoadMoreImpl;
-}
-
-/// @nodoc
 mixin _$NewAndHotState {
   bool? get isLoading => throw _privateConstructorUsedError;
   NeewAndHotData? get neewAndHotData => throw _privateConstructorUsedError;
-  int? get currentPage => throw _privateConstructorUsedError;
-  bool? get hasReachedMax => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $NewAndHotStateCopyWith<NewAndHotState> get copyWith =>
@@ -422,11 +294,7 @@ abstract class $NewAndHotStateCopyWith<$Res> {
           NewAndHotState value, $Res Function(NewAndHotState) then) =
       _$NewAndHotStateCopyWithImpl<$Res, NewAndHotState>;
   @useResult
-  $Res call(
-      {bool? isLoading,
-      NeewAndHotData? neewAndHotData,
-      int? currentPage,
-      bool? hasReachedMax});
+  $Res call({bool? isLoading, NeewAndHotData? neewAndHotData});
 }
 
 /// @nodoc
@@ -444,8 +312,6 @@ class _$NewAndHotStateCopyWithImpl<$Res, $Val extends NewAndHotState>
   $Res call({
     Object? isLoading = freezed,
     Object? neewAndHotData = freezed,
-    Object? currentPage = freezed,
-    Object? hasReachedMax = freezed,
   }) {
     return _then(_value.copyWith(
       isLoading: freezed == isLoading
@@ -456,14 +322,6 @@ class _$NewAndHotStateCopyWithImpl<$Res, $Val extends NewAndHotState>
           ? _value.neewAndHotData
           : neewAndHotData // ignore: cast_nullable_to_non_nullable
               as NeewAndHotData?,
-      currentPage: freezed == currentPage
-          ? _value.currentPage
-          : currentPage // ignore: cast_nullable_to_non_nullable
-              as int?,
-      hasReachedMax: freezed == hasReachedMax
-          ? _value.hasReachedMax
-          : hasReachedMax // ignore: cast_nullable_to_non_nullable
-              as bool?,
     ) as $Val);
   }
 }
@@ -476,11 +334,7 @@ abstract class _$$NewAndHotStateImplCopyWith<$Res>
       __$$NewAndHotStateImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {bool? isLoading,
-      NeewAndHotData? neewAndHotData,
-      int? currentPage,
-      bool? hasReachedMax});
+  $Res call({bool? isLoading, NeewAndHotData? neewAndHotData});
 }
 
 /// @nodoc
@@ -496,8 +350,6 @@ class __$$NewAndHotStateImplCopyWithImpl<$Res>
   $Res call({
     Object? isLoading = freezed,
     Object? neewAndHotData = freezed,
-    Object? currentPage = freezed,
-    Object? hasReachedMax = freezed,
   }) {
     return _then(_$NewAndHotStateImpl(
       isLoading: freezed == isLoading
@@ -508,14 +360,6 @@ class __$$NewAndHotStateImplCopyWithImpl<$Res>
           ? _value.neewAndHotData
           : neewAndHotData // ignore: cast_nullable_to_non_nullable
               as NeewAndHotData?,
-      currentPage: freezed == currentPage
-          ? _value.currentPage
-          : currentPage // ignore: cast_nullable_to_non_nullable
-              as int?,
-      hasReachedMax: freezed == hasReachedMax
-          ? _value.hasReachedMax
-          : hasReachedMax // ignore: cast_nullable_to_non_nullable
-              as bool?,
     ));
   }
 }
@@ -523,24 +367,16 @@ class __$$NewAndHotStateImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$NewAndHotStateImpl implements _NewAndHotState {
-  const _$NewAndHotStateImpl(
-      {this.isLoading,
-      this.neewAndHotData,
-      this.currentPage,
-      this.hasReachedMax});
+  const _$NewAndHotStateImpl({this.isLoading, this.neewAndHotData});
 
   @override
   final bool? isLoading;
   @override
   final NeewAndHotData? neewAndHotData;
-  @override
-  final int? currentPage;
-  @override
-  final bool? hasReachedMax;
 
   @override
   String toString() {
-    return 'NewAndHotState(isLoading: $isLoading, neewAndHotData: $neewAndHotData, currentPage: $currentPage, hasReachedMax: $hasReachedMax)';
+    return 'NewAndHotState(isLoading: $isLoading, neewAndHotData: $neewAndHotData)';
   }
 
   @override
@@ -551,16 +387,11 @@ class _$NewAndHotStateImpl implements _NewAndHotState {
             (identical(other.isLoading, isLoading) ||
                 other.isLoading == isLoading) &&
             (identical(other.neewAndHotData, neewAndHotData) ||
-                other.neewAndHotData == neewAndHotData) &&
-            (identical(other.currentPage, currentPage) ||
-                other.currentPage == currentPage) &&
-            (identical(other.hasReachedMax, hasReachedMax) ||
-                other.hasReachedMax == hasReachedMax));
+                other.neewAndHotData == neewAndHotData));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType, isLoading, neewAndHotData, currentPage, hasReachedMax);
+  int get hashCode => Object.hash(runtimeType, isLoading, neewAndHotData);
 
   @JsonKey(ignore: true)
   @override
@@ -573,18 +404,12 @@ class _$NewAndHotStateImpl implements _NewAndHotState {
 abstract class _NewAndHotState implements NewAndHotState {
   const factory _NewAndHotState(
       {final bool? isLoading,
-      final NeewAndHotData? neewAndHotData,
-      final int? currentPage,
-      final bool? hasReachedMax}) = _$NewAndHotStateImpl;
+      final NeewAndHotData? neewAndHotData}) = _$NewAndHotStateImpl;
 
   @override
   bool? get isLoading;
   @override
   NeewAndHotData? get neewAndHotData;
-  @override
-  int? get currentPage;
-  @override
-  bool? get hasReachedMax;
   @override
   @JsonKey(ignore: true)
   _$$NewAndHotStateImplCopyWith<_$NewAndHotStateImpl> get copyWith =>

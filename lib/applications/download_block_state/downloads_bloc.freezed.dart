@@ -19,32 +19,38 @@ mixin _$DownloadsEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() getDownloadImages,
+    required TResult Function() getscreenImages,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? getDownloadImages,
+    TResult? Function()? getscreenImages,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? getDownloadImages,
+    TResult Function()? getscreenImages,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_GetDownloadImages value) getDownloadImages,
+    required TResult Function(_GetscreenImages value) getscreenImages,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_GetDownloadImages value)? getDownloadImages,
+    TResult? Function(_GetscreenImages value)? getscreenImages,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_GetDownloadImages value)? getDownloadImages,
+    TResult Function(_GetscreenImages value)? getscreenImages,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -107,6 +113,7 @@ class _$GetDownloadImagesImpl implements _GetDownloadImages {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() getDownloadImages,
+    required TResult Function() getscreenImages,
   }) {
     return getDownloadImages();
   }
@@ -115,6 +122,7 @@ class _$GetDownloadImagesImpl implements _GetDownloadImages {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? getDownloadImages,
+    TResult? Function()? getscreenImages,
   }) {
     return getDownloadImages?.call();
   }
@@ -123,6 +131,7 @@ class _$GetDownloadImagesImpl implements _GetDownloadImages {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? getDownloadImages,
+    TResult Function()? getscreenImages,
     required TResult orElse(),
   }) {
     if (getDownloadImages != null) {
@@ -135,6 +144,7 @@ class _$GetDownloadImagesImpl implements _GetDownloadImages {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_GetDownloadImages value) getDownloadImages,
+    required TResult Function(_GetscreenImages value) getscreenImages,
   }) {
     return getDownloadImages(this);
   }
@@ -143,6 +153,7 @@ class _$GetDownloadImagesImpl implements _GetDownloadImages {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_GetDownloadImages value)? getDownloadImages,
+    TResult? Function(_GetscreenImages value)? getscreenImages,
   }) {
     return getDownloadImages?.call(this);
   }
@@ -151,6 +162,7 @@ class _$GetDownloadImagesImpl implements _GetDownloadImages {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_GetDownloadImages value)? getDownloadImages,
+    TResult Function(_GetscreenImages value)? getscreenImages,
     required TResult orElse(),
   }) {
     if (getDownloadImages != null) {
@@ -165,10 +177,116 @@ abstract class _GetDownloadImages implements DownloadsEvent {
 }
 
 /// @nodoc
+abstract class _$$GetscreenImagesImplCopyWith<$Res> {
+  factory _$$GetscreenImagesImplCopyWith(_$GetscreenImagesImpl value,
+          $Res Function(_$GetscreenImagesImpl) then) =
+      __$$GetscreenImagesImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$GetscreenImagesImplCopyWithImpl<$Res>
+    extends _$DownloadsEventCopyWithImpl<$Res, _$GetscreenImagesImpl>
+    implements _$$GetscreenImagesImplCopyWith<$Res> {
+  __$$GetscreenImagesImplCopyWithImpl(
+      _$GetscreenImagesImpl _value, $Res Function(_$GetscreenImagesImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$GetscreenImagesImpl implements _GetscreenImages {
+  const _$GetscreenImagesImpl();
+
+  @override
+  String toString() {
+    return 'DownloadsEvent.getscreenImages()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$GetscreenImagesImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() getDownloadImages,
+    required TResult Function() getscreenImages,
+  }) {
+    return getscreenImages();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? getDownloadImages,
+    TResult? Function()? getscreenImages,
+  }) {
+    return getscreenImages?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? getDownloadImages,
+    TResult Function()? getscreenImages,
+    required TResult orElse(),
+  }) {
+    if (getscreenImages != null) {
+      return getscreenImages();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_GetDownloadImages value) getDownloadImages,
+    required TResult Function(_GetscreenImages value) getscreenImages,
+  }) {
+    return getscreenImages(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_GetDownloadImages value)? getDownloadImages,
+    TResult? Function(_GetscreenImages value)? getscreenImages,
+  }) {
+    return getscreenImages?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_GetDownloadImages value)? getDownloadImages,
+    TResult Function(_GetscreenImages value)? getscreenImages,
+    required TResult orElse(),
+  }) {
+    if (getscreenImages != null) {
+      return getscreenImages(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _GetscreenImages implements DownloadsEvent {
+  const factory _GetscreenImages() = _$GetscreenImagesImpl;
+}
+
+/// @nodoc
 mixin _$Downloadstate {
   Option<Either<DownloadsFail, List<Downloads>>>
       get downloadsFailureOrSuccesOption => throw _privateConstructorUsedError;
   bool get isLoading => throw _privateConstructorUsedError;
+  bool get ispageLoading => throw _privateConstructorUsedError;
+  int? get page => throw _privateConstructorUsedError;
+  int? get totalPages => throw _privateConstructorUsedError;
+  List<Data>? get modelScreen => throw _privateConstructorUsedError;
   List<Downloads>? get downloads => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -186,6 +304,10 @@ abstract class $DownloadstateCopyWith<$Res> {
       {Option<Either<DownloadsFail, List<Downloads>>>
           downloadsFailureOrSuccesOption,
       bool isLoading,
+      bool ispageLoading,
+      int? page,
+      int? totalPages,
+      List<Data>? modelScreen,
       List<Downloads>? downloads});
 }
 
@@ -204,6 +326,10 @@ class _$DownloadstateCopyWithImpl<$Res, $Val extends Downloadstate>
   $Res call({
     Object? downloadsFailureOrSuccesOption = null,
     Object? isLoading = null,
+    Object? ispageLoading = null,
+    Object? page = freezed,
+    Object? totalPages = freezed,
+    Object? modelScreen = freezed,
     Object? downloads = freezed,
   }) {
     return _then(_value.copyWith(
@@ -215,6 +341,22 @@ class _$DownloadstateCopyWithImpl<$Res, $Val extends Downloadstate>
           ? _value.isLoading
           : isLoading // ignore: cast_nullable_to_non_nullable
               as bool,
+      ispageLoading: null == ispageLoading
+          ? _value.ispageLoading
+          : ispageLoading // ignore: cast_nullable_to_non_nullable
+              as bool,
+      page: freezed == page
+          ? _value.page
+          : page // ignore: cast_nullable_to_non_nullable
+              as int?,
+      totalPages: freezed == totalPages
+          ? _value.totalPages
+          : totalPages // ignore: cast_nullable_to_non_nullable
+              as int?,
+      modelScreen: freezed == modelScreen
+          ? _value.modelScreen
+          : modelScreen // ignore: cast_nullable_to_non_nullable
+              as List<Data>?,
       downloads: freezed == downloads
           ? _value.downloads
           : downloads // ignore: cast_nullable_to_non_nullable
@@ -235,6 +377,10 @@ abstract class _$$DownloadstateImplCopyWith<$Res>
       {Option<Either<DownloadsFail, List<Downloads>>>
           downloadsFailureOrSuccesOption,
       bool isLoading,
+      bool ispageLoading,
+      int? page,
+      int? totalPages,
+      List<Data>? modelScreen,
       List<Downloads>? downloads});
 }
 
@@ -251,6 +397,10 @@ class __$$DownloadstateImplCopyWithImpl<$Res>
   $Res call({
     Object? downloadsFailureOrSuccesOption = null,
     Object? isLoading = null,
+    Object? ispageLoading = null,
+    Object? page = freezed,
+    Object? totalPages = freezed,
+    Object? modelScreen = freezed,
     Object? downloads = freezed,
   }) {
     return _then(_$DownloadstateImpl(
@@ -262,6 +412,22 @@ class __$$DownloadstateImplCopyWithImpl<$Res>
           ? _value.isLoading
           : isLoading // ignore: cast_nullable_to_non_nullable
               as bool,
+      ispageLoading: null == ispageLoading
+          ? _value.ispageLoading
+          : ispageLoading // ignore: cast_nullable_to_non_nullable
+              as bool,
+      page: freezed == page
+          ? _value.page
+          : page // ignore: cast_nullable_to_non_nullable
+              as int?,
+      totalPages: freezed == totalPages
+          ? _value.totalPages
+          : totalPages // ignore: cast_nullable_to_non_nullable
+              as int?,
+      modelScreen: freezed == modelScreen
+          ? _value._modelScreen
+          : modelScreen // ignore: cast_nullable_to_non_nullable
+              as List<Data>?,
       downloads: freezed == downloads
           ? _value._downloads
           : downloads // ignore: cast_nullable_to_non_nullable
@@ -276,14 +442,35 @@ class _$DownloadstateImpl implements _Downloadstate {
   const _$DownloadstateImpl(
       {required this.downloadsFailureOrSuccesOption,
       required this.isLoading,
+      required this.ispageLoading,
+      this.page,
+      this.totalPages,
+      final List<Data>? modelScreen,
       final List<Downloads>? downloads})
-      : _downloads = downloads;
+      : _modelScreen = modelScreen,
+        _downloads = downloads;
 
   @override
   final Option<Either<DownloadsFail, List<Downloads>>>
       downloadsFailureOrSuccesOption;
   @override
   final bool isLoading;
+  @override
+  final bool ispageLoading;
+  @override
+  final int? page;
+  @override
+  final int? totalPages;
+  final List<Data>? _modelScreen;
+  @override
+  List<Data>? get modelScreen {
+    final value = _modelScreen;
+    if (value == null) return null;
+    if (_modelScreen is EqualUnmodifiableListView) return _modelScreen;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   final List<Downloads>? _downloads;
   @override
   List<Downloads>? get downloads {
@@ -296,7 +483,7 @@ class _$DownloadstateImpl implements _Downloadstate {
 
   @override
   String toString() {
-    return 'Downloadstate(downloadsFailureOrSuccesOption: $downloadsFailureOrSuccesOption, isLoading: $isLoading, downloads: $downloads)';
+    return 'Downloadstate(downloadsFailureOrSuccesOption: $downloadsFailureOrSuccesOption, isLoading: $isLoading, ispageLoading: $ispageLoading, page: $page, totalPages: $totalPages, modelScreen: $modelScreen, downloads: $downloads)';
   }
 
   @override
@@ -310,13 +497,27 @@ class _$DownloadstateImpl implements _Downloadstate {
                     downloadsFailureOrSuccesOption) &&
             (identical(other.isLoading, isLoading) ||
                 other.isLoading == isLoading) &&
+            (identical(other.ispageLoading, ispageLoading) ||
+                other.ispageLoading == ispageLoading) &&
+            (identical(other.page, page) || other.page == page) &&
+            (identical(other.totalPages, totalPages) ||
+                other.totalPages == totalPages) &&
+            const DeepCollectionEquality()
+                .equals(other._modelScreen, _modelScreen) &&
             const DeepCollectionEquality()
                 .equals(other._downloads, _downloads));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, downloadsFailureOrSuccesOption,
-      isLoading, const DeepCollectionEquality().hash(_downloads));
+  int get hashCode => Object.hash(
+      runtimeType,
+      downloadsFailureOrSuccesOption,
+      isLoading,
+      ispageLoading,
+      page,
+      totalPages,
+      const DeepCollectionEquality().hash(_modelScreen),
+      const DeepCollectionEquality().hash(_downloads));
 
   @JsonKey(ignore: true)
   @override
@@ -330,6 +531,10 @@ abstract class _Downloadstate implements Downloadstate {
       {required final Option<Either<DownloadsFail, List<Downloads>>>
           downloadsFailureOrSuccesOption,
       required final bool isLoading,
+      required final bool ispageLoading,
+      final int? page,
+      final int? totalPages,
+      final List<Data>? modelScreen,
       final List<Downloads>? downloads}) = _$DownloadstateImpl;
 
   @override
@@ -337,6 +542,14 @@ abstract class _Downloadstate implements Downloadstate {
       get downloadsFailureOrSuccesOption;
   @override
   bool get isLoading;
+  @override
+  bool get ispageLoading;
+  @override
+  int? get page;
+  @override
+  int? get totalPages;
+  @override
+  List<Data>? get modelScreen;
   @override
   List<Downloads>? get downloads;
   @override

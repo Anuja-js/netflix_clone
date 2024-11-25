@@ -1,12 +1,13 @@
+// ignore_for_file: depend_on_referenced_packages
+
 import 'package:bloc/bloc.dart';
 import 'package:dartz/dartz.dart';
-// ignore: depend_on_referenced_packages
+ // // ignore: depend_on_referenced_packages
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
 import 'package:netflix/domain/NewAndHot/NeewAndHotData.dart';
 import '../../domain/NewAndHot/sevice_newAndHot.dart';
 import '../../domain/core/failure/downloadfailures.dart';
-// import 'package:NewRepo.dart';
 part 'new_and_hot_event.dart';
 part 'new_and_hot_state.dart';
 part 'new_and_hot_bloc.freezed.dart';
@@ -43,30 +44,5 @@ class NewAndHotBloc extends Bloc<NewAndHotEvent, NewAndHotState> {
       }));
     });
 
-    // on<_LoadMore>((event, emit) async {
-    //   if (state.hasReachedMax == false) {
-    //     final currentState = state.copyWith(isLoading: true);
-    //
-    //     emit(currentState);
-    //
-    //     final Either<DownloadsFail, NeewAndHotData?> result =
-    //     await _newAndHotRepo.loadMoreData();
-    //
-    //     emit(result.fold(
-    //             (l) => currentState.copyWith(isLoading: false),
-    //             (r) {
-    //           final newData = r;
-    //           final hasReachedMax = newData == null || newData.isEmpty;
-    //
-    //           return currentState.copyWith(
-    //             isLoading: false,
-    //             hasReachedMax: hasReachedMax,
-    //             neewAndHotData: hasReachedMax
-    //                 ? currentState.neewAndHotData
-    //                 : currentState.neewAndHotData! + newData,
-    //           );
-    //         }));
-    //   }
-    // });
   }
 }

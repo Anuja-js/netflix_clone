@@ -2,9 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:netflix/applications/fast_and_laughs/fast_laughs_bloc.dart';
 import 'package:netflix/presentation/fast_laughs/widgets/vedioListItem.dart';
-
-import '../../domain/fast_laughs/models/ProfilePic.dart';
-
 class FastLaughs extends StatefulWidget {
   const FastLaughs({Key? key}) : super(key: key);
 
@@ -13,15 +10,16 @@ class FastLaughs extends StatefulWidget {
 }
 
 class _FastLaughsState extends State<FastLaughs> {
+  @override
   Widget build(BuildContext context) {
     WidgetsBinding.instance.addPostFrameCallback((_) {
-      context.read<FastLaughsBloc>().add(FastLaughsEvent.getProfileImages());
-      context.read<FastLaughsBloc>().add(FastLaughsEvent.getVedios());
+      context.read<FastLaughsBloc>().add(const FastLaughsEvent.getProfileImages());
+      context.read<FastLaughsBloc>().add(const FastLaughsEvent.getVedios());
     });
     return Scaffold(body: BlocBuilder<FastLaughsBloc, FastLaughsState>(
       builder: (context, state) {
         return SafeArea(
-            child: PageView(
+            child: PageView(physics: const ScrollPhysics(),
                 scrollDirection: Axis.vertical,
                 children: List.generate(
                     state.vediosData?.videos!.first.videoFiles?.length ==

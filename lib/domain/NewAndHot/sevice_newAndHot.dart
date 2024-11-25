@@ -7,6 +7,6 @@ import 'package:dartz/dartz.dart';
 abstract class NewRepo{
   Future<Either<DownloadsFail,NeewAndHotData>> getCommingsoonList({String? key});
   Future<Either<DownloadsFail,NeewAndHotData>> getEveryoneList({String? key});
-
+  // Future<Either<DownloadsFail, NeewAndHotData>> loadMoreData({int? page});
 
 }

@@ -30,17 +30,19 @@ class FastLaughRepo implements FastRepo {
         //   return Downloads.fromJson(e);
         // }).toList();
 
-        // if (kDebugMode) {
+        if (kDebugMode) {
         print(
             "sdfghj............................................../////////////////////////////////.${response.data}");
-        // }
+        }
 
         return Right(ProfilePic.fromJson(response.data));
       } else {
         return const Left(DownloadsFail.serverFailure());
       }
     } catch (e) {
-      print('=====================${e.toString()}');
+      if (kDebugMode) {
+        print('=====================${e.toString()}');
+      }
 
 
       return const Left(DownloadsFail.clientFailure());
@@ -62,8 +64,10 @@ class FastLaughRepo implements FastRepo {
           BaseOptions(headers: {'Authorization':'nFmUzR1pUdWoHSKjjJ7wtZwB4ahNQeBTPiji8BL1JM94zndmsPGQXoZU'})).get("https://api.pexels.com/videos/popular?per_page=1");
       if (response.statusCode == 200 || response.statusCode == 201) {
 
-        print(
+        if (kDebugMode) {
+          print(
             "sdfghj............................................../////////////////////////////////.${response.data}");
+        }
 
 
         return Right(VediosData.fromJson(response.data));
@@ -71,7 +75,9 @@ class FastLaughRepo implements FastRepo {
         return const Left(DownloadsFail.serverFailure());
       }
     } catch (e) {
-      print('=====================${e.toString()}');
+      if (kDebugMode) {
+        print('=====================${e.toString()}');
+      }
 
 
       return const Left(DownloadsFail.clientFailure());

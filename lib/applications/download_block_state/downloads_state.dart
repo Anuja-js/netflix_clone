@@ -7,13 +7,19 @@ abstract class Downloadstate with _$Downloadstate {
     required Option<Either<DownloadsFail, List<Downloads>>>
         downloadsFailureOrSuccesOption,
     required bool isLoading,
-     List<Downloads>? downloads,
+    required bool ispageLoading,
+    int? page,
+    int? totalPages,
+    List<Data>? modelScreen,
+    List<Downloads>? downloads,
   }) = _Downloadstate;
 
   factory Downloadstate.initial() {
-    return  Downloadstate(
+    return  const Downloadstate(
       isLoading: false,
+      ispageLoading: false,
       downloadsFailureOrSuccesOption: None(),
+      page: 0
 
     );
   }
